@@ -1,9 +1,19 @@
 import React from 'react';
 
-const SearchInput = () => {
+const SearchInput = ({ setFilteredEmojies }) => {
+	const searchInputValue = (e) => {
+		setFilteredEmojies(e.target.value);
+	};
+
 	return (
 		<div>
-			<input type='text' name='' id='' className='search_emoji' />
+			<input
+				type='text'
+				name='search input'
+				id='search-input'
+				className='search_emoji'
+				onChange={searchInputValue}
+			/>
 		</div>
 	);
 };
