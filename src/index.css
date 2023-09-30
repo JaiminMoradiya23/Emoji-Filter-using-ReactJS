@@ -17,3 +17,70 @@ code {
 .App {
 	text-align: center;
 }
+
+.container {
+	padding: 20px 50px;
+}
+
+.emoji_wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+.card {
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.emoji {
+	font-size: 40px;
+}
+
+.copy_button {
+	position: absolute;
+	top: -40px;
+	right: 10px;
+	border: 2px solid;
+	background-color: #222;
+	padding: 5px 15px;
+	color: #fff;
+	opacity: 0;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.copy_button_clicked {
+	top: 10px;
+	opacity: 1;
+}
+
+.copy_button_success {
+	background-color: rgba(0, 153, 0, 0.8);
+	font-weight: bold;
+	box-shadow: 0 4px 15px 0 rgba(0, 255, 0, 0.6);
+}
+
+.search_emoji {
+	background-color: #111;
+	color: #fff;
+	font-size: 18px;
+	border: 2px solid;
+	width: 70%;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: all 0.15s ease-in-out;
+}
+
+.search_emoji:focus {
+	outline: none;
+	box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.6);
+}
